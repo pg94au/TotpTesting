@@ -20,7 +20,7 @@ namespace DotNetExample
             var remainingSeconds = totp.RemainingSeconds(time);
             Console.WriteLine($"Time remaining for this code: {remainingSeconds} seconds");
 
-            // This shows the remaining time for the current code.  It rolls over so it doesn't become negative or time.
+            // This shows the remaining time for the current code.  It rolls over so it doesn't become negative over time.
             remainingSeconds = totp.RemainingSeconds(time.AddSeconds(5));
             Console.WriteLine($"Time remaining for this code after 5 seconds: {remainingSeconds} seconds");
 
