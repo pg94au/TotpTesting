@@ -34,6 +34,7 @@
             this.totpTextBox = new System.Windows.Forms.TextBox();
             this.validateButton = new System.Windows.Forms.Button();
             this.resultLabel = new System.Windows.Forms.Label();
+            this.codeTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.qrPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,7 +50,7 @@
             // generateButton
             // 
             this.generateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.generateButton.Location = new System.Drawing.Point(68, 344);
+            this.generateButton.Location = new System.Drawing.Point(67, 377);
             this.generateButton.Name = "generateButton";
             this.generateButton.Size = new System.Drawing.Size(206, 33);
             this.generateButton.TabIndex = 1;
@@ -85,11 +86,22 @@
             this.resultLabel.Size = new System.Drawing.Size(0, 25);
             this.resultLabel.TabIndex = 5;
             // 
+            // codeTextBox
+            // 
+            this.codeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.codeTextBox.Location = new System.Drawing.Point(22, 333);
+            this.codeTextBox.Name = "codeTextBox";
+            this.codeTextBox.ReadOnly = true;
+            this.codeTextBox.Size = new System.Drawing.Size(600, 29);
+            this.codeTextBox.TabIndex = 6;
+            this.codeTextBox.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(793, 400);
+            this.ClientSize = new System.Drawing.Size(793, 437);
+            this.Controls.Add(this.codeTextBox);
             this.Controls.Add(this.resultLabel);
             this.Controls.Add(this.validateButton);
             this.Controls.Add(this.totpTextBox);
@@ -112,6 +124,7 @@
         private System.Windows.Forms.TextBox totpTextBox;
         private System.Windows.Forms.Button validateButton;
         private System.Windows.Forms.Label resultLabel;
+        private System.Windows.Forms.TextBox codeTextBox;
     }
 }
 

@@ -34,7 +34,7 @@ namespace DotNetGuiApp
             var totpUri = $"otpauth://totp/{HttpUtility.UrlEncode(issuer)}:{HttpUtility.UrlEncode(accountName)}" +
                           $"?secret={secretKeyBase32}" +
                           $"&issuer={HttpUtility.UrlEncode(issuer)}" +
-                          "&algorithm=SHA1" + // Or SHA256, SHA512 if using those modes with Otp.NET
+                          "&algorithm=SHA1" + // Other SHA variants not supported by popular TOTP applications
                           "&digits=6" + // Or 8, depending on your setup
                           "&period=30"; // Or other period, depending on your setup
 
@@ -51,6 +51,9 @@ namespace DotNetGuiApp
             svgDoc.Draw(svgBitmap);
 
             qrPictureBox.Image = svgBitmap;
+
+            codeTextBox.Text = secretKeyBase32;
+            codeTextBox.Visible = true;
         }
 
         private void validateButton_Click(object sender, EventArgs e)
